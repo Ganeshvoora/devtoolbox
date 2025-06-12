@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   // State for user information
+  
 
   return (
     <main className="min-h-screen bg-black text-white pt-10">

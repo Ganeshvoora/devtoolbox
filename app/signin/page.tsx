@@ -88,7 +88,7 @@ export default function Signin() {
         localStorage.setItem("userType", "user");
         
         // Redirect to dashboard on successful login
-        router.push("/");
+  window.location.href = "/";
       }
     } catch (error) {
       console.error('Sign in error:', error);
