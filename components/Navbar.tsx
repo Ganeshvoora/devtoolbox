@@ -18,7 +18,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between p-4 border-b border-gray-800 bg-black text-white">
+    <nav className="flex items-center justify-between p-4 border-b border-gray-800 bg-black text-white fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center space-x-2">
         <span className="text-blue-400 text-xl font-bold">{"</>"}</span>
         <span className="font-semibold">DevToolBox</span>

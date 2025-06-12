@@ -32,7 +32,7 @@ export default function Home() {
   }, [session]);
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white pt-10">
 
 
       {/* Hero Section */}
@@ -219,7 +219,7 @@ export default function Home() {
 
           <div className="flex justify-center">
             {/* Contact Form */}
-            <div className="bg-gray-900 p-8 rounded-lg border border-gray-800 min-w-[450px]">
+            <div className="bg-gray-900 p-8 rounded-lg border border-gray-800 min-w-[380px]">
               <h3 className="text-xl font-semibold mb-6">Send us a message</h3>
               <form className="space-y-6">
                 <div>
