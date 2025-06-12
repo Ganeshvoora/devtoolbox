@@ -18,7 +18,7 @@ const PrivateRoute = ({ children }: PrivateRouteProps) => {
     return <div>Loading...</div>; 
   }
 
-  if (!session && pathname !== "/"&& pathname !== "/signin") {
+  if (!session && pathname !== "/"&& pathname !== "/signup") {
     router.push("/signin");
     // return <div>Redirecting...</div>;
     return null; // Prevents rendering while redirecting
