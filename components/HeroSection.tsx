@@ -34,12 +34,11 @@ const HeroSection = () => {
         <div className="md:w-1/2 space-y-4 mb-8 md:mb-0">
           <h1 className="text-4xl md:text-5xl font-bold text-blue-400">Developer Toolbox</h1>
           {/* display user name and greet him */}
-          {/* {username &&
+          {username &&
             <p className="text-xl text-gray-300">
               Welcome back, <span className="text-blue-400 font-semibold">{username}</span>!
             </p>
-          } */}
-          UserName /
+          } 
           <p className="text-xl text-gray-300">Your All-in-One Developer Toolkit</p>
           <p className="text-gray-400 max-w-md">
             Access powerful development tools, AI assistance, and resources - all in one place.

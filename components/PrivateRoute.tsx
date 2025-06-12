@@ -19,7 +19,8 @@ const PrivateRoute = ({ children }: PrivateRouteProps) => {
 
   if (!session) {
     router.push("/signin"); 
-    return <div>Redirecting...</div>; 
+    // return <div>Redirecting...</div>; 
+    return null; // Prevents rendering while redirecting
   }
 
   return <><SessionProvider >{children}</SessionProvider></>;

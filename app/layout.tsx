@@ -27,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: "DevToolbox - Developer Utilities Suite",
     description: "A modern, full-featured developer toolbox web app for all your development needs.",
-    url: "https://your-domain.com",
+    url: "https://devtoolboxvvsg.vercel.app/",
     siteName: "DevToolbox",
     images: [
       {
