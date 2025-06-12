@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -72,6 +73,7 @@ export default function CodeExplainer() {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white pb-16">
       <motion.div 
         className="container mx-auto py-12 px-4"
@@ -221,6 +223,7 @@ export default function CodeExplainer() {
         </div>
       </motion.div>
     </div>
+    </PrivateRoute>
   );
 }
 

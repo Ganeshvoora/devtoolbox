@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -61,6 +62,7 @@ export default function CodePreview() {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white">
       <motion.div 
         className="container mx-auto py-12 px-4"
@@ -197,5 +199,6 @@ export default function CodePreview() {
         </div>
       </motion.div>
     </div>
+    </PrivateRoute>
   );
 }

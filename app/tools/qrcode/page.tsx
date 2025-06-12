@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState, useRef } from 'react';
 import QRCode from "react-qr-code";
@@ -95,6 +96,7 @@ const QRCodeGenerator = () => {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white">
       <main className="container mx-auto py-12 px-4">
         <motion.div 
@@ -264,6 +266,7 @@ const QRCodeGenerator = () => {
         </motion.div>
       </main>
     </div>
+    </PrivateRoute>
   );
 };
 

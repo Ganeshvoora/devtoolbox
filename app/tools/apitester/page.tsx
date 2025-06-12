@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -239,6 +240,7 @@ export default function ApiTester() {
     };
 
     return (
+        <PrivateRoute>
         <div className="min-h-screen bg-black text-white">
             <div className="container mx-auto py-12 px-4">
                 <motion.div
@@ -749,5 +751,6 @@ export default function ApiTester() {
                 </motion.div>
             </div>
         </div>
+        </PrivateRoute>
     );
 }

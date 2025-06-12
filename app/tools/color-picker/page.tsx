@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -150,6 +151,7 @@ export default function ColorPicker() {
  
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white">
       <div className="container mx-auto py-12 px-4">
         <motion.div 
@@ -294,5 +296,6 @@ export default function ColorPicker() {
         </motion.div>
       </div>
     </div>
+    </PrivateRoute>
   );
 }

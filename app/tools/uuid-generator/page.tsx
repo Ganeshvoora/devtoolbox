@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -130,6 +131,7 @@ export default function UuidGenerator() {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white pb-16">
       <div className="container mx-auto py-12 px-4">
         <motion.div 
@@ -323,5 +325,6 @@ export default function UuidGenerator() {
         </motion.div>
       </div>
     </div>
+    </PrivateRoute>
   );
 }

@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -80,6 +81,7 @@ export default function HashGenerator() {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white pb-16">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -204,5 +206,6 @@ export default function HashGenerator() {
         </div>
       </motion.div>
     </div>
+    </PrivateRoute>
   );
 }

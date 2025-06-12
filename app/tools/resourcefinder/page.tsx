@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -153,6 +154,7 @@ export default function ResourceFinder() {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-[#1e1e1e] text-[#d4d4d4] mx-auto py-10 px-40">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -303,5 +305,6 @@ export default function ResourceFinder() {
         )}
       </motion.div>
     </div>
+    </PrivateRoute>
   );
 }

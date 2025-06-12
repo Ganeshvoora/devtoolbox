@@ -1,4 +1,5 @@
 'use client';
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -56,6 +57,7 @@ export default function MarkdownPreview() {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white">
       <div className="container mx-auto py-12 px-4">
         <motion.div 
@@ -169,5 +171,6 @@ export default function MarkdownPreview() {
         </motion.div>
       </div>
     </div>
+    </PrivateRoute>
   );
 }
