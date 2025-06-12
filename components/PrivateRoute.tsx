@@ -1,7 +1,7 @@
 
 "use client";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { ReactNode } from "react";
 import { SessionProvider } from "next-auth/react";
 
@@ -13,13 +13,14 @@ interface PrivateRouteProps {
 const PrivateRoute = ({ children }: PrivateRouteProps) => {
   const { data: session, status } = useSession();
   const router = useRouter();
+  const pathname = usePathname();
   if (status === "loading") {
     return <div>Loading...</div>; 
   }
 
-  if (!session) {
-    router.push("/signin"); 
-    // return <div>Redirecting...</div>; 
+  if (!session && pathname !== "/") {
+    router.push("/signin");
+    // return <div>Redirecting...</div>;
     return null; // Prevents rendering while redirecting
   }
 
