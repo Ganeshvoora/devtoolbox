@@ -391,8 +391,8 @@ export default function Signup() {
         setTimeout(() => {
             setSignupSuccess(true);
             setIsSubmitting(false);
-            // Redirect to signin and replace history
-            router.replace("/signin");
+            // Redirect to signup and replace history
+            router.replace("/signup");
         }, 1000);
     };
 
