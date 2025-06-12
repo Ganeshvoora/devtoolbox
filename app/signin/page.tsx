@@ -201,15 +201,15 @@ export default function Signin() {
               )}
             </div>
             
-            {/* Remember me & Forgot password */}
+
             <div className="flex items-center justify-between">
 
               
-              <div className="text-sm">
+              {/* <div className="text-sm">
                 <Link href="/forgot-password" className="font-medium text-blue-500 hover:text-blue-400">
                   Forgot your password?
                 </Link>
-              </div>
+              </div> */}
             </div>
             
             {/* Submit Button */}
