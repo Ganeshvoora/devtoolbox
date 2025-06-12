@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute";
 
 import React, { useState, useEffect,useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -118,6 +119,7 @@ export default function NewsPage() {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white">
       <main className="container mx-auto py-12 px-4">
         <motion.h1 
@@ -269,5 +271,6 @@ export default function NewsPage() {
         )}
       </main>
     </div>
+    </PrivateRoute>
   );
 }

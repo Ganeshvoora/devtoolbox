@@ -1,4 +1,5 @@
 "use client";
+import PrivateRoute from "@/components/PrivateRoute"; 
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -71,6 +72,7 @@ export default function ChatPage() {
   };
 
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white flex flex-col">
       <main className="flex-grow container mx-auto mt-8 p-4 md:mt-16">
         <motion.div 
@@ -194,5 +196,6 @@ export default function ChatPage() {
         </motion.div>
       </main>
     </div>
+    </PrivateRoute>
   );
 }

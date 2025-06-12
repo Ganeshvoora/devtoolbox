@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import PrivateRoute from "@/components/PrivateRoute";
+
 
 interface Todo {
   id: string;
@@ -127,6 +129,7 @@ export default function TodosPage() {
   const remainingCount = todos.length - completedCount;
   
   return (
+    <PrivateRoute>
     <div className="min-h-screen bg-black text-white">
       <main className="container mx-auto py-12 px-4">
         <motion.div 
@@ -291,5 +294,6 @@ export default function TodosPage() {
         </motion.div>
       </main>
     </div>
+    </PrivateRoute>
   );
 }
