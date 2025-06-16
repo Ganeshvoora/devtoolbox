@@ -42,7 +42,7 @@ export default function CodeExplainer() {
     setIsLoading(true);
     
     try {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
       const prompt = `Explain this ${language} code in detail. Provide a clear explanation that would help a beginner understand how it works. Include key concepts, what the code does, and if relevant, an example of it in action:\n\n${code}`;
       
       const response = await fetch(url, {
